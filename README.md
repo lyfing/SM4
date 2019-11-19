@@ -1,7 +1,6 @@
 # SM4
 SM4国产加密算法PHP实现版本
 
-<code>
 一、加解密说明
 1. git文件结构
 .
@@ -19,4 +18,3 @@ SM4::decryptData 为加密字符串解密算法
 
 参考:
 1.《关于PKCS5Padding与PKCS7Padding的区别》https://blog.csdn.net/zsy19881226/article/details/46928177?utm_source=blogxgwz0
-</code>
