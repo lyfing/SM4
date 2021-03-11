@@ -127,9 +127,9 @@ class SM4
         );
         $chunks = str_split($pad_bytes, $this->block_size);
 
-        return strtolower(implode('', array_map(function ($chunk) {
+        return implode('', array_map(function ($chunk) {
             return $this->encrypt($chunk);
-        }, $chunks)));
+        }, $chunks));
     }
 
 
@@ -272,10 +272,10 @@ class SM4
 
         $pad_length = hexdec(substr($decrypt_text_data, -2));
 
-        return strtolower(hex2bin(preg_replace(
+        return hex2bin(preg_replace(
                                       sprintf("/%s$/", str_repeat(sprintf("%02x", $pad_length), $pad_length)),
                                       '',
                                       $decrypt_text_data
-                                  )));
+                                  ));
     }
 }
